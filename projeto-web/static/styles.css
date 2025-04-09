@@ -1,0 +1,54 @@
+/* CSS de todas as páginas */
+body{
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;    
+}
+
+.topo{ 
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+h3{
+    text-align: center;
+}
+
+p, hr {
+    width: 50%;
+    margin: 0 auto; 
+    text-align: center; 
+}
+
+hr {
+    margin: 20px auto;
+}
+
+.form{
+    padding: 0;
+    margin: 0 auto;
+    width: 50%;  
+}
+
+.tabela {
+    width: 60%;           
+    margin: 0 auto;     
+}
+
+.table {
+    width: 100%;         
+    border-collapse: collapse; 
+}
+
+.table th, .table td {
+    text-align: center;   
+    padding: 10px;      
+}
+
+.nav-link:hover{
+    color: rgb(52, 97, 248);
+}

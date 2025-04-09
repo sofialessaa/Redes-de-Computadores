@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  app1:
+    build: ./projeto-web
+    container_name: app1
+    environment:
+      SERVER_NAME: "Servidor 1"
+    ports:
+      - "5001:5000"
+
+  app2:
+    build: ./projeto-web
+    container_name: app2
+    environment:
+      SERVER_NAME: "Servidor 2"
+    ports:
+      - "5002:5000"
+
+  app3:
+    build: ./projeto-web
+    container_name: app3
+    environment:
+      SERVER_NAME: "Servidor 3"
+    ports:
+      - "5003:5000"
+
+  nginx:
+    image: nginx:latest
+    container_name: loadbalancer
+    depends_on:
+      - app1
+      - app2
+      - app3
+    ports:
+      - "8080:80" 
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro

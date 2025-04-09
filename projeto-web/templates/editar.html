@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+<div class="form"></div>
+    <h3>Editar Usuário</h3>
+
+    <!-- Campo de cadastro -->
+    <div class="container col-md-6 shadow p-3 mb-5 bg-body rounded">
+        <div class="row justify-content-center">
+            <form method="post">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nome:</label>
+                    <input type="text" name="nome" value="{{ user[1] }}" class="form-control">
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" name="email" value="{{ user[2] }}" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="pwd" class="form-label">Filme:</label>
+                    <input type="text" name="filme" value="{{ user[3] }}" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="pwd" class="form-label">Nota:</label>
+                    <input type="number" name="nota" value="{{ user[4] }}" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="pwd" class="form-label">Opinião sobre o filme:</label>
+                    <textarea name="opiniao" class="form-control">{{ user[5] }}</textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Salvar</button>
+                <a href="{{ url_for('users') }}" class="btn btn-secondary">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
