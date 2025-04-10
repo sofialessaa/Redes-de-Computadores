@@ -74,5 +74,9 @@ def users():
         return render_template("users.html", userDetails=userDetails)
     return 'Nenhum usuário encontrado.'
 
+@app.context_processor
+def inject_server_name():
+    return dict(server_name=server_name)
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
