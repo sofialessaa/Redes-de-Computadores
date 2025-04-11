@@ -40,3 +40,7 @@
 
 * Não se esqueça de criar o database e tabela no seu mysql workbench.
 * [Acesse bdaws.txt](./projeto-web/bdaws.txt)
+---
+
+### Volte para as intruções do DOCKER
+* Acesse o passo a passo do [Docker](./readme-docker.md)
