@@ -31,6 +31,7 @@
 ### ⚠️ Aviso!
 * Antes de ir para o passo 3, vamos criar o Banco de Dados no RDS da AWS.
 * [Acesse Aqui](./instruções/banco-readme.md)
+
 ---
 
 ### Passo 3: Conectando no Terminal da sua máquina
