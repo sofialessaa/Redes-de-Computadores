@@ -69,6 +69,7 @@ sudo apt install docker-compose docker.io -y
 ``` bash
 sudo docker-compose up --build -d
 ```
+* Acesse no navegador: http://<ENDEREÇO_IP_PUBLICO>
 ---
 
 ### Alguns comandos para o docker:
@@ -87,4 +88,6 @@ sudo docker stop <nome-do-container>  # Encerra o container
 ``` bash
 sudo docker rm <nome-do-container>    # Remove o container
 ```
+
+### Vídeo da aplicação rodando 
 
