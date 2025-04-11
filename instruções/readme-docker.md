@@ -1,4 +1,4 @@
-## 🧱 Passo a Passo Completo da Infraestrutura (EC2, Docker, NGINX)
+## Passo a Passo Completo da Infraestrutura (EC2, Docker, NGINX)
 
 ### Passo 1: Acesse sua AWS e crie uma instância!
 * Vá em **Executar Instâncias**, de um nome a ela e escolha Ubuntu!
@@ -90,4 +90,8 @@ sudo docker rm <nome-do-container>    # Remove o container
 ```
 
 ### Vídeo da aplicação rodando 
+
+https://github.com/user-attachments/assets/6efb11d7-0c21-446c-83af-e848f3dadafb
+
+
 
