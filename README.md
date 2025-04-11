@@ -5,7 +5,7 @@ Este projeto tem como objetivo a criação de uma infraestrutura de TI robusta p
 
 <Details>   
   <Summary>    
-    📝 Requisitos:
+    Requisitos:
   </Summary>
 
 </br>
@@ -44,21 +44,16 @@ Definir a estrutura de endereçamento da empresa e implementar DHCP para gerenci
 A aplicação foi construída utilizando Docker, organizada em múltiplos containers. É dividida em três componentes principais: o backend (que executa o servidor Python/Flask), o Nginx (como proxy reverso e balanceador de carga), e o Banco de Dados MySQL hospedado na AWS RDS (para armazenamento de dados relacionados aos usuários e suas opiniões sobre filmes).
 
 ---
+###  Passo a Passo da Configuração - Projeto aws
 
-### Tecnologias utilizadas
-![AWS](https://img.shields.io/badge/aws-232F3E.svg?style=for-the-badge&logo=aws&logoColor=white)
-![Nginx](https://img.shields.io/badge/nginx-009639.svg?style=for-the-badge&logo=nginx&logoColor=white)
-![Docker](https://img.shields.io/badge/docker-2496ED.svg?style=for-the-badge&logo=docker&logoColor=white)
-![Python](https://img.shields.io/badge/python-3776AB.svg?style=for-the-badge&logo=python&logoColor=white)
-![Flask](https://img.shields.io/badge/-Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
-![AWS RDS](https://img.shields.io/badge/AWS_RDS-527FFF.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
+  * Acesse para ver o passo a passo do [Projeto](./instruções/readme-docker.md)
+  * Acesse para ver o passo a passo do [Banco de Dados](./instruções/banco-readme.md) no RDS.
 
 ---
 
 <Details> 
   <Summary>
-    🏗️ Estrutura do Projeto
+     Estrutura do Projeto
   </Summary>
 
 </br>
@@ -75,7 +70,7 @@ O projeto está dividido em:
 
 <Details> 
   <Summary>
-    🧠 Arquitetura e Justificativa Técnica
+     Arquitetura e Justificativa Técnica
   </Summary>
 
 #### 1. Uso do Docker
@@ -99,7 +94,7 @@ Utilizar o RDS permite escalar o banco de dados de forma automática, além de c
 
 <Details> 
   <Summary>
-    🔁 Fluxo das Requisições
+     Fluxo das Requisições
   </Summary>
 
 </br>
@@ -111,12 +106,48 @@ Utilizar o RDS permite escalar o banco de dados de forma automática, além de c
 
 </Details> 
 
+<Details>
+  <Summary>Resumo</Summary>
+
+🐳 Dockerfile
+* Define como a imagem do backend será criada:
+* Usa imagem base Python 3.9;
+* Instala bibliotecas do sistema e dependências Python (via requirements.txt);
+* Expõe a porta 5000 para acesso à aplicação Flask;
+* Inicia a aplicação com python app.py.
+
+💾 Banco de Dados (AWS RDS MySQL)
+* Banco de dados hospedado na AWS RDS;
+* Tabela criada para armazenar dados dos usuários e suas opiniões sobre filmes.
+
+🌐 Nginx (Proxy Reverso + Load Balancer)
+* Distribui o tráfego entre 3 containers de backend (app1, app2, app3);
+* Usa pesos para definir quais instâncias recebem mais requisições (app1 recebe mais);
+* Encaminha requisições da porta 80 para o backend de forma equilibrada.
+
+🧩 Docker Compose
+* Orquestra a execução de todos os containers;
+* Define os serviços app1, app2, app3 (backends) e nginx;
+* Garante que o Nginx só inicie após os backends estarem prontos.
+
+  ---
+
+✅ Benefícios da Arquitetura
+* Escalável: Suporta mais acessos com múltiplos containers;
+* Alta Disponibilidade: Se uma instância falhar, as outras continuam funcionando;
+* Fácil de manter: Componentes isolados e banco de dados gerenciado na nuvem.
+</Details>
+
 ---
 
-### ⚙️ Passo a Passo da Configuração - Projeto aws
-
-  * Acesse para ver o passo a passo do [Projeto](./instruções/readme-docker.md)
-  * Acesse para ver o passo a passo do [Banco de Dados](./instruções/banco-readme.md) no RDS.
+### Tecnologias utilizadas
+![AWS](https://img.shields.io/badge/aws-232F3E.svg?style=for-the-badge&logo=aws&logoColor=white)
+![Nginx](https://img.shields.io/badge/nginx-009639.svg?style=for-the-badge&logo=nginx&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-2496ED.svg?style=for-the-badge&logo=docker&logoColor=white)
+![Python](https://img.shields.io/badge/python-3776AB.svg?style=for-the-badge&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/-Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![AWS RDS](https://img.shields.io/badge/AWS_RDS-527FFF.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
 ---
 
