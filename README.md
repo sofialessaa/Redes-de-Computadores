@@ -99,24 +99,24 @@ Utilizar o RDS permite escalar o banco de dados de forma automática, além de c
 
 <Details> 
   <Summary>
-    📝 Fluxo de Requisições
+    🔁 Fluxo das Requisições
   </Summary>
 
 </br>
 
-1. O usuário envia uma requisição para o servidor, que é direcionada à porta 80 do Nginx;
-2. O Nginx, atuando como proxy reverso, recebe a requisição e a encaminha para uma dos servidores de backend (app1, app2, ou app3) com base na configuração de balanceamento de carga;
-3. O servidor do backend processa a requisição, interage com o banco de dados (se necessário) e envia a resposta de volta para o Nginx;
-4. O Nginx retorna a resposta ao usuário.
+* O usuário acessa o sistema via navegador (porta 80);
+* O Nginx recebe a requisição e a redireciona para um servidor de backend;
+* O backend processa e consulta o banco de dados, se necessário;
+* O Nginx retorna a resposta ao usuário.
 
 </Details> 
 
-<details>
-  <summary>⚙️ Explicação das Configurações</summary>
+---
 
-  * Acesse para ver a configuração do [Projeto](./instruções/readme-docker.md)
+### ⚙️ Passo a Passo da Configuração - Projeto aws
 
-</details>
+  * Acesse para ver o passo a passo do [Projeto](./instruções/readme-docker.md)
+  * Acesse para ver o passo a passo do [Banco de Dados](./instruções/banco-readme.md) no RDS.
 
 ---
 
