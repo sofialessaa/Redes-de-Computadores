@@ -28,6 +28,10 @@
 ![image](https://github.com/user-attachments/assets/c2915104-9dc3-4ebb-893c-72b94edd0e98)
 
 ---
+### ⚠️ Aviso!
+* Antes de ir para o passo 3, vamos criar o Banco de Dados no RDS da AWS.
+* [Acesse Aqui](./instruções/banco-readme.md)
+---
 
 ### Passo 3: Conectando no Terminal da sua máquina
 * Copie o seu Endereço IPv4 público e no terminal escreva:
