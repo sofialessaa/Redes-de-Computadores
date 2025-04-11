@@ -54,7 +54,7 @@ sudo apt update
 sudo apt upgrade -y
 ```
 * Clone o seu repositório ou crie as pastas e arquivos no terminal
-    * Quer criar as pastas pelo terminal? [Acesse Aqui](./instruções/readme-arquivos.md)
+    * Quer criar as pastas pelo terminal? [Acesse Aqui](./readme-arquivos.md)
 ``` bash
 git clone <url-do-repositorio> #Comando para clonar o repositório do GitHub
 ```
