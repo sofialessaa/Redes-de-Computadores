@@ -81,4 +81,10 @@ sudo docker logs <nome-do-container> #veja os logs de algum container
 ``` bash
 sudo docker-compose down #encerre e remova todos os containers
 ```
+``` bash
+sudo docker stop <nome-do-container>  # Encerra o container
+```
+``` bash
+sudo docker rm <nome-do-container>    # Remove o container
+```
 
