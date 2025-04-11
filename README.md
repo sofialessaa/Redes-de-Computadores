@@ -1,6 +1,6 @@
 ## Trabalho Prático: Infraestrutura de Rede Integrada para a Empresa XPTO
 
-### 🎯 Objetivo
+### Objetivo
 Este projeto tem como objetivo a criação de uma infraestrutura de TI robusta para a empresa XPTO, integrando tecnologias modernas de rede e computação em nuvem. O foco é desenvolver um ambiente de acesso seguro, alta disponibilidade e gerenciamento eficiente de tráfego e dados, promovendo confiabilidade e eficiência para a organização.
 
 <Details>   
@@ -35,14 +35,17 @@ Definir a estrutura de endereçamento da empresa e implementar DHCP para gerenci
 
 ---
 
-### 🧩 Arquitetura da rede
+###  Arquitetura da rede
 ![dagrama-de-redes](https://github.com/user-attachments/assets/4d005e48-e671-4976-875d-962a99841b41)
+
+---
 
 ### Visão Geral
 A aplicação foi construída utilizando Docker, organizada em múltiplos containers. É dividida em três componentes principais: o backend (que executa o servidor Python/Flask), o Nginx (como proxy reverso e balanceador de carga), e o Banco de Dados MySQL hospedado na AWS RDS (para armazenamento de dados relacionados aos usuários e suas opiniões sobre filmes).
 
+---
 
-### 🛠️ Tecnologias utilizadas
+### Tecnologias utilizadas
 ![AWS](https://img.shields.io/badge/aws-232F3E.svg?style=for-the-badge&logo=aws&logoColor=white)
 ![Nginx](https://img.shields.io/badge/nginx-009639.svg?style=for-the-badge&logo=nginx&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker-2496ED.svg?style=for-the-badge&logo=docker&logoColor=white)
@@ -51,6 +54,7 @@ A aplicação foi construída utilizando Docker, organizada em múltiplos contai
 ![AWS RDS](https://img.shields.io/badge/AWS_RDS-527FFF.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
+---
 
 <Details> 
   <Summary>
@@ -113,3 +117,12 @@ Utilizar o RDS permite escalar o banco de dados de forma automática, além de c
   * Acesse para ver a configuração do [Projeto](./instruções/readme-docker.md)
 
 </details>
+
+---
+
+### Equipe 
+|Nome | GitHub|
+| -------- | -------- |
+|**Julia Gonzalez**| [![](https://bit.ly/3f9Xo0P)](https://github.com/juliagonzalezmoreira)|
+|**Maria Luiza Guedes**| [![](https://bit.ly/3f9Xo0P)](https://github.com/mluizaguedes)|
+|**Sofia Lessa**|[![](https://bit.ly/3f9Xo0P)](https://github.com/sofialessaa)|
