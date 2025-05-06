@@ -36,3 +36,14 @@ services:
       - "80:80" 
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+
+  initdb:
+    image: mysql:8.0
+    container_name: initdb
+    volumes:
+      - ./db/bdaws.sql:/docker-entrypoint-initdb.d/init.sql
+    entrypoint: >
+      bash -c "
+        sleep 10 &&
+        mysql -h database.cbqfmw47p9tq.us-east-1.rds.amazonaws.com -u admin -patvRedes2025 < /docker-entrypoint-initdb.d/init.sql
+      "
